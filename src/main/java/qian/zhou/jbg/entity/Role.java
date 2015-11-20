@@ -22,7 +22,7 @@ public class Role {
 		this.users = users;
 	}
 
-	@ManyToMany
+	@ManyToMany(mappedBy="roles")
 	private List<User> users;
 
 	public Integer getId() {
