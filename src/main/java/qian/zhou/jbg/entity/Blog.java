@@ -2,12 +2,14 @@ package qian.zhou.jbg.entity;
 
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
+
 
 @Entity
 public class Blog {
@@ -22,7 +24,7 @@ public class Blog {
 	@JoinTable(name = "user_id")
 	private User user;
 
-	@OneToMany(mappedBy = "blog")
+	@OneToMany(mappedBy = "blog",cascade=CascadeType.REMOVE)
 	private List<Item> items;
 
 	public User getUser() {
