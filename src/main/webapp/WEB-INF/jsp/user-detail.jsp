@@ -52,20 +52,22 @@
 <br />
 <br />
 
-
 <div>
 
 
-<script type="text/javascript">
-	$(document).ready(function() {
-		$('.nav-tabs a:first').tab('show');
-		$(".triggerRemove").click(function(e) {
-			e.preventDefault();
-			$("#modalRemove .removeBtn").attr("href", $(this).attr("href"));
-			$("#modalRemove").modal();
-		});
-	});
-</script>
+	<script type="text/javascript">
+		$(document).ready(
+				function() {
+					$('.nav-tabs a:first').tab('show');
+					$(".triggerRemove").click(
+							function(e) {
+								e.preventDefault();
+								$("#modalRemove .removeBtn").attr("href",
+										$(this).attr("href"));
+								$("#modalRemove").modal();
+							});
+				});
+	</script>
 
 
 	<!-- Nav tabs -->

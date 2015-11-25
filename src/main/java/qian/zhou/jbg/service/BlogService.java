@@ -1,6 +1,7 @@
 package qian.zhou.jbg.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Service;
 
 import qian.zhou.jbg.entity.Blog;
@@ -22,9 +23,14 @@ public class BlogService {
 		blogRepository.save(blog);
 	}
 
-	public void delete(int id) {
-		blogRepository.delete(id);
+	@PreAuthorize("#blog.user.name==authentication.name or hasRole('ROLE_ADMIN')")
+	public void delete(Blog blog) {
+		blogRepository.delete(blog);
 
+	}
+
+	public Blog findOne(int id) {
+		return blogRepository.findOne(id);
 	}
 
 }
