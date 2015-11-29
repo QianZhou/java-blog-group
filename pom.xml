@@ -13,8 +13,15 @@
 		<spring.security.version>3.2.3.RELEASE</spring.security.version>
 	</properties>
 
+
 	<dependencies>
-		<dependency>
+	<dependency>
+		<groupId>org.hibernate</groupId>
+		<artifactId>hibernate-validator</artifactId>
+		<version>5.2.2.Final</version>
+	</dependency>
+
+	<dependency>
 			<groupId>org.springframework.security</groupId>
 			<artifactId>spring-security-taglibs</artifactId>
 			<version>${spring.security.version}</version>

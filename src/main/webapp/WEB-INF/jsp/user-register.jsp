@@ -6,7 +6,7 @@
 
 	<c:if test="${param.success eq true }">
 
-		<div class="alert alter-success" >Registration successful!!</div>
+		<div class="alert alter-success">Registration successful!!</div>
 
 
 	</c:if>
@@ -17,6 +17,8 @@
 		<label for="name" class="col-sm-2 control-label">Name:</label>
 		<div class="col-sm-10">
 			<form:input path="name" cssClass="form-control" placeholder="Name" />
+			<form:errors path="name" />
+
 		</div>
 	</div>
 
@@ -24,6 +26,7 @@
 		<label for="email" class="col-sm-2 control-label">Email:</label>
 		<div class="col-sm-10">
 			<form:input path="email" cssClass="form-control" placeholder="Email" />
+			<form:errors path="email" />
 		</div>
 	</div>
 
@@ -33,6 +36,8 @@
 		<div class="col-sm-10">
 			<form:password path="password" cssClass="form-control"
 				placeholder="password" />
+			<form:errors path="password" />
+
 		</div>
 	</div>
 

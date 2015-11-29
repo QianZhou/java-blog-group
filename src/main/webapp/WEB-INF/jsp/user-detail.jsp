@@ -5,8 +5,6 @@
 <h1>${user.name}</h1>
 
 
-
-
 <!-- Button trigger modal -->
 <button type="button" class="btn btn-primary btn-lg" data-toggle="modal"
 	data-target="#myModal">New blog</button>
@@ -30,6 +28,7 @@
 						<div class="col-sm-10">
 							<form:input path="name" cssClass="form-control"
 								placeholder="Name" />
+							<form:errors path="name" />
 						</div>
 					</div>
 
@@ -37,6 +36,7 @@
 						<label for="name" class="col-sm-2 control-label">URL:</label>
 						<div class="col-sm-10">
 							<form:input path="url" cssClass="form-control" placeholder="URL" />
+							<form:errors path="url" />
 						</div>
 					</div>
 				</div>
