@@ -19,10 +19,14 @@
 
 <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
 <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+<script type="text/javascript"
+	src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/jquery.validate.min.js"></script>
+
 
 <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
 <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 <!-- 
+
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title><tiles:getAsString name="title" /></title>
 </head>
@@ -55,12 +59,11 @@
 				href="<spring:url value='/' />">Home</a></li>
 
 
-
 			<security:authorize access="hasRole('ROLE_ADMIN')">
 				<li class="${current=='users'?'active':''}"><a
 					href="<spring:url value="/users.html" />">Users</a></li>
 			</security:authorize>
-			
+
 			<li class="${current=='register'?'active':''}"><a
 				href="<spring:url value="/register.html" />">Register</a></li>
 
@@ -68,13 +71,13 @@
 				<li class="${current=='login'?'active':''}"><a
 					href="<spring:url value="/login.html" />">Login</a></li>
 			</security:authorize>
-			
-			
+
+
 			<security:authorize access="isAuthenticated()">
 				<li class="${current=='account'?'active':''}"><a
 					href="<spring:url value="/account.html" />">My account</a></li>
 			</security:authorize>
-			
+
 			<security:authorize access="isAuthenticated()">
 
 				<li><a href="<spring:url value="/logout" />">Logout</a></li>
@@ -89,6 +92,5 @@
 	<tiles:insertAttribute name="footer" />
 </center>
 </nav>
-</div>
 </body>
 </html>
