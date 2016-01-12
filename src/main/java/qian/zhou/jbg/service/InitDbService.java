@@ -63,10 +63,8 @@ public class InitDbService {
 		blogJavavids.setUser(userAdmin);
 		blogRepository.save(blogJavavids);
 
-		Item item1 = new Item();
+		/*Item item1 = new Item();
 		item1.setBlog(blogJavavids);
-		
-		
 		item1.setTitle("first");
 		item1.setPublishedDate(new Date());
 		item1.setLink("http://www.javaids.com");
@@ -76,7 +74,7 @@ public class InitDbService {
 		item2.setTitle("second");
 		item2.setPublishedDate(new Date());
 		item2.setLink("http://www.javaids.com");
-		itemRepository.save(item2);
+		itemRepository.save(item2);*/
 
 	}
 }
