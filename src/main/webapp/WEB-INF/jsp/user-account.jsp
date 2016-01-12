@@ -122,9 +122,17 @@
 					<tbody>
 
 						<c:forEach items="${blog.items}" var="item">
-							<tr>
+							<%-- <tr>
 								<td>${item.title}</td>
 								<td>${item.link}</td>
+							</tr> --%>
+							<tr>
+								<td><c:out value="${item.publishedDate}" /></td>
+								<td><strong> <a
+										href="<c:out value="${item.link}" />" target="_blank"> <c:out
+												value="${item.title}" />
+									</a>
+								</strong> <br /> ${item.description}</td>
 							</tr>
 						</c:forEach>
 					</tbody>

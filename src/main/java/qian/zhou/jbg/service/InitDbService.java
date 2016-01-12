@@ -59,12 +59,14 @@ public class InitDbService {
 
 		Blog blogJavavids = new Blog();
 		blogJavavids.setName("JavaVids");
-		blogJavavids.setUrl("http://feeds.feedburner.com/javavids?format-xml");
+		blogJavavids.setUrl("http://feeds.feedburner.com/javavids?format=xml");
 		blogJavavids.setUser(userAdmin);
 		blogRepository.save(blogJavavids);
 
 		Item item1 = new Item();
 		item1.setBlog(blogJavavids);
+		
+		
 		item1.setTitle("first");
 		item1.setPublishedDate(new Date());
 		item1.setLink("http://www.javaids.com");
